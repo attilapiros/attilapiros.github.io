@@ -61,3 +61,15 @@ topics:
   - name: Java
     web_url: https://www.java.com/en/
     image_url: https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/300px-Java_programming_language_logo.svg.png
+
+  - name: Clojure
+    web_url: https://clojure.org/
+    image_url: https://clojure.org/images/clojure-logo-120b.png
+
+  - name: Python
+    web_url: https://www.python.org/
+    image_url: https://www.python.org/static/img/python-logo@2x.png
+
+  - name: NeoVim
+    web_url: https://neovim.io
+    image_url: https://neovim.io/images/logo@2x.png
