@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Contribution Portfolio - Attila Zsolt Piros</title>
+    <style>
+        :root {
+            --primary-color: #e25a1c; /* Spark Orange */
+            --secondary-color: #1d3557;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .category-section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .contribution-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contribution-type {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .type-pr { color: #28a745; }
+        .type-review { color: #007bff; }
+        .type-help { color: #6f42c1; }
+
+        .contribution-link {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contribution-link:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        li:hover {
+            border-left-color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Attila Zsolt Piros</h1>
+    <p>Open Source Contribution Portfolio</p>
+</header>
+
+<div class="container">
+
+<section class="category-section">
+<h2>Spark Shuffle and Block Management</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/24499" class="contribution-link">[SPARK-27677][Core]Serve local disk persisted blocks by the external service after releasing executor by dynamic allocation</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/25299" class="contribution-link">[SPARK-27651][Core]Avoid the network when shuffle blocks are fetched from the same host</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/28967" class="contribution-link">[SPARK-32149][SHUFFLE]Improve file path name normalisation at block resolution within the external shuffle service</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/23688" class="contribution-link">[SPARK-25035][Core]Avoiding memory mapping at disk-stored blocks replication</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/24554" class="contribution-link">[SPARK-27622][Core]Avoiding the network when block manager fetches disk persisted RDD blocks from the same host</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28848" class="contribution-link">[SPARK-32003][CORE]When external shuffle service is used, unregister outputs for executor on fetch failure after executor is lost</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28618" class="contribution-link">[SPARK-31801][API][SHUFFLE]Register map output metadata</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28331" class="contribution-link">[WIP][SPARK-20629][CORE]Copy shuffle data when nodes are being shutdown</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28708" class="contribution-link">[[SPARK-20629][CORE][K8S]Copy shuffle data when nodes are being shutdown</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/31298" class="contribution-link">[SPARK-34193][CORE]TorrentBroadcast block manager decommissioning race fix</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/30164#discussion_r524292900" class="contribution-link">[SPARK-32919][SHUFFLE][test-maven][test-hadoop2.7]Driver side changes for coordinating push based shuffle by selecting external shuffle services for merging partitions</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/30062" class="contribution-link">[SPARK-32916][SHUFFLE]Implementation of shuffle service that leverages push-based shuffle in YARN deployment mode</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28940" class="contribution-link">[SPARK-32121][SHUFFLE]Support Windows OS in ExecutorDiskUtils</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/29211" class="contribution-link">[SPARK-31197][CORE]Shutdown executor once we are done decommissioning</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28619" class="contribution-link">[SPARK-21040][CORE]Speculate tasks which are running on decommission executors</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/23393" class="contribution-link">[SPARK-26288][CORE]Restore RegisteredExecutors information for External shuffle service in Standalone/Kubernetes backend when the service is restarted</a>
+    </li>
+    
+</ul>
+</section>
+<section class="category-section">
+<h2>Spark on Kubernetes</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/30675" class="contribution-link">[SPARK-33711][K8S]Avoid race condition between POD lifecycle manager and scheduler backend</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/31445" class="contribution-link">[SPARK-34334][K8S]Correctly identify timed out pending pod requests as excess request</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/31561" class="contribution-link">[SPARK-34426][K8S][TESTS]Add driver and executors POD logs to integration tests log when the test fails</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/31513" class="contribution-link">[SPARK-34361][K8S]In case of downscaling avoid killing of executors already known by the scheduler backend in the pod allocator]not yet merge</a>
+    </li>
+    
+</ul>
+</section>
+<section class="category-section">
+<h2>Spark UI</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/20601" class="contribution-link">[SPARK-23413][UI]Fix sorting tasks by Host / Executor ID at the Stage page</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/20589" class="contribution-link">[SPARK-23394][UI]In RDD storage page show the executor addresses instead of the IDs</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/20408" class="contribution-link">[SPARK-23189][Core][Web UI]Reflect stage level blacklisting on executor tab</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/20203" class="contribution-link">[SPARK-22577][Core]executor page blacklist status should update with TaskSet level blacklisting</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/23090" class="contribution-link">[SPARK-26118][Web UI]Introducing spark.ui.requestHeaderSize for setting HTTP requestHeaderSize</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28094" class="contribution-link">[SPARK-29303][Web UI]Add UI support for stage level scheduling</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/27257" class="contribution-link">[SPARK-30540][WEBUI]HistoryServer application link is incorrect when one application having multiple attempts</a>
+    </li>
+    
+</ul>
+</section>
+<section class="category-section">
+<h2>Spark on YARN</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/21635" class="contribution-link">[SPARK-24594][YARN]Introducing metrics for YARN</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/21068" class="contribution-link">[SPARK-16630][YARN]Blacklist a node if executors won't launch on it</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/31397" class="contribution-link">[SPARK-34154][YARN][FOLLOWUP]Fix flaky LocalityPlacementStrategySuite test</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24245" class="contribution-link">[SPARK-13704][CORE][YARN]Reduce rack resolution time</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/26343" class="contribution-link">[SPARK-29683][YARN]Job will fail due to executor failures all available nodes are blacklisted</a>
+    </li>
+    
+</ul>
+</section>
+<section class="category-section">
+<h2>Spark Networking: Netty, transport layer, frame and message encoding / decoding</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/23278" class="contribution-link">[SPARK-24920][Core]Allow sharing Netty's memory pool allocators</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/23930" class="contribution-link">[SPARK-27021][CORE]Cleanup of Netty event loop group for shuffle chunk fetch requests</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/23602#discussion_r257186965" class="contribution-link">[SPARK-26674][CORE]Consolidate CompositeByteBuf when reading large frame</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/25907" class="contribution-link">[SPARK-29206][SHUFFLE]Make number of shuffle server threads a multiple of number of chunk fetch handler threads.</a>
+    </li>
+    
+</ul>
+</section>
+<section class="category-section">
+<h2>Build release and infrastructure</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/31559" class="contribution-link">[SPARK-34433][DOCS]Lock Jekyll version by Gemfile and Bundler]two LGTMs from commiters but not yet merge</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24308" class="contribution-link">[SPARK-27397][Core]Take care of OpenJ9 JVM in Spark</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24241" class="contribution-link">[SPARK-27323][CORE][SQL][STREAMING]Use Single-Abstract-Method support in Scala 2.12 to simplify code</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/28971" class="contribution-link">[SPARK-29292][SPARK-30010][CORE]Let core compile for Scala 2.13</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24364" class="contribution-link">[SPARK-27452][BUILD]Update zstd-jni to 1.3.8-9</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24264" class="contribution-link">[SPARK-27216][CORE]Upgrade RoaringBitmap to 0.7.45 to fix Kryo unsafe ser/dser issue</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24243" class="contribution-link">[SPARK-26918][DOCS]All .md should have ASF license header</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24126" class="contribution-link">[SPARK-26961][core]Enable parallel classloading capability</a>
+    </li>
+    
+</ul>
+</section>
+<section class="category-section">
+<h2>Spark SQL and Data Sources</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/23000" class="contribution-link">[SPARK-26002][SQL]Fix day of year calculation for Julian calendar days</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/31133" class="contribution-link">[SPARK-26836][SQL]Supporting Avro schema evolution for partitioned Hive tables with ``avro.schema.literal''</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/19224" class="contribution-link">[SPARK-20990][SQL]Read all JSON documents in files when multiline mode is on</a>
+    </li>
+    
+</ul>
+</section>
+<section class="category-section">
+<h2>Spark Scheduler and Task Scheduling</h2>
+<ul>
+
+    <li>
+        <span class="contribution-type type-pr">Pull Request</span>
+        <a href="https://github.com/apache/spark/pull/50630" class="contribution-link">[SPARK-51272][CORE]Aborting instead of continuing partially completed indeterminate result stage at ResubmitFailedStages</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24462#issuecomment-487810457" class="contribution-link">[SPARK-26268][CORE]Do not resubmit tasks when executors are lost</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/24035#discussion_r264781264" class="contribution-link">[SPARK-27112]Spark Scheduler encounters two independent Deadlocks</a>
+    </li>
+    
+
+    <li>
+        <span class="contribution-type type-review">Review</span>
+        <a href="https://github.com/apache/spark/pull/26633" class="contribution-link">[SPARK-29994][CORE]Add WILDCARD task location</a>
+    </li>
+    
+</ul>
+</section>
+
+</div>
+</body>
+</html>
+
