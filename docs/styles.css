@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #5257E3; 
+    --secondary-color: #1d3557;
+    --accent-color: red;
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    background-color: var(--secondary-color);
+    display: inline-block;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    margin: 1.5rem;
+    color: white;
+}
+
+h3 {
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#container {
+    max-width: 1424px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.category-section {
+    margin-bottom: 3rem;
+}
+
+
+.contribution-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contribution-type {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.type-pr { color: #28a745; }
+.type-review { color: #007bff; }
+.type-help { color: #6f42c1; }
+
+.contribution-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.contribution-link:hover {
+    color: var(--primary-color);
+}
+
+ol {
+    /* list-style: none; */
+    padding: 0;
+    padding-top: 0.5rem;
+    counter-reset: item;
+    list-style-type: none;
+}
+
+ol>li::before { 
+    content: counters(item, '.') '   '; 
+}
+
+li {
+    counter-increment: item;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s;
+}
+
+li:hover {
+    border-left-color: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+#toc-title {
+  font-weight: 800;
+  text-align: center;
+}
+
+#toc-container li, #toc-container ol, #toc-container ol li{
+  /* list-style: outside none none !important; */
+}
+
+
+
+/* 2. Desktop Styles (Large Screens) */
+@media (min-width: 1424px) {
+    #container {
+        display: grid;
+        /* Main content takes 3 parts, ToC takes 1 part */
+        grid-template-columns: 3fr 1fr; 
+        gap: 50px;
+        align-items: start;
+    }
+
+    #toc-container {
+        /* This keeps the ToC in view as you scroll */
+        position: sticky;
+        top: 20px;
+        /* Moves ToC to the second column */
+        grid-column: 2;
+        /* Moves content to first column */
+        order: 2; 
+    }
+
+    #content-area {
+        grid-column: 1;
+        order: 1;
+    }
+}
+
