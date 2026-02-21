@@ -1,10 +1,20 @@
 :root {
-    --primary-color: #5257E3; 
+    --primary-color: #5257E3;
     --secondary-color: #1d3557;
-    --accent-color: red;
+    --accent-color: #e11d48;
     --text-color: #333;
     --bg-color: #f4f7f6;
-    --card-bg: #ffffff;
+    --card-bg: #fff;
+
+    /* Layout & design tokens */
+    --container-max: 1424px;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --radius-1: 0.5rem;
+    --radius-2: 1rem;
+    --shadow-1: 0 2px 5px rgb(0 0 0 / 0.1);
 }
 
 body {
@@ -18,7 +28,7 @@ body {
 
 header {
     background-color: var(--secondary-color);
-    color: white;
+    color: #fff;
     padding: 3rem 1rem;
     text-align: center;
 }
@@ -51,30 +61,47 @@ header p {
     opacity: 0.9;
 }
 
+h2 {
+    background-color: var(--secondary-color);
+    color: #fff;
+    display: inline-block;
+    border-style: none;
+    border-radius: var(--radius-2);
+    padding: 0.7rem;
+    margin: var(--space-3);
+}
+
+h3 {
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: var(--space-1);
+    margin-bottom: var(--space-3);
+    color: var(--secondary-color);
+}
+
 #container {
-    max-width: 1424px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: var(--container-max);
+    margin: var(--space-4) auto;
+    padding: 0 var(--space-2);
 }
 
 .category-section {
     margin-bottom: 3rem;
 }
 
-
 .contribution-card {
     background: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    box-shadow: var(--shadow-1);
+    padding: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
 .contribution-type {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-1);
     display: block;
 }
 
@@ -93,54 +120,48 @@ header p {
     color: var(--primary-color);
 }
 
-ol {
-    /* list-style: none; */
+#toc-title {
+    font-weight: 800;
+    text-align: center;
+}
+
+#toc-container ol {
     padding: 0;
-    padding-top: 0.5rem;
+    padding-top: var(--space-1);
     counter-reset: item;
     list-style-type: none;
 }
 
-ol>li::before { 
-    content: counters(item, '.') '   '; 
-}
-
-li {
+#toc-container li {
     counter-increment: item;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-2);
     border-left: 4px solid transparent;
     transition: border-color 0.3s;
 }
 
-li:hover {
+#toc-container li:hover {
     border-left-color: var(--primary-color);
+}
+
+#toc-container ol > li::before {
+    content: counters(item, '.') '. ';
+    margin-right: var(--space-1);
 }
 
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: var(--space-4);
     font-size: 0.9rem;
     color: #777;
 }
 
-#toc-title {
-  font-weight: 800;
-  text-align: center;
-}
-
-#toc-container li, #toc-container ol, #toc-container ol li{
-  /* list-style: outside none none !important; */
-}
-
-
-
-/* 2. Desktop Styles (Large Screens) */
+/* Desktop Styles (Large Screens) */
 @media (min-width: 1424px) {
     #container {
         display: grid;
         /* Main content takes 3 parts, ToC takes 1 part */
-        grid-template-columns: 3fr 1fr; 
+        grid-template-columns: 3fr 1fr;
         gap: 50px;
         align-items: start;
     }
@@ -152,12 +173,16 @@ footer {
         /* Moves ToC to the second column */
         grid-column: 2;
         /* Moves content to first column */
-        order: 2; 
+        order: 2;
     }
 
     #content-area {
         grid-column: 1;
         order: 1;
     }
-}
 
+    /* Ensure the sticky ToC works in a grid context */
+    #toc-container {
+        align-self: start;
+    }
+}
