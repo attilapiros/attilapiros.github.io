@@ -157,7 +157,7 @@ footer {
 }
 
 /* Desktop Styles (Large Screens) */
-@media (min-width: 1424px) {
+@media (min-width: 1424px) and (min-height: 800px) {
     #container {
         display: grid;
         /* Main content takes 3 parts, ToC takes 1 part */
